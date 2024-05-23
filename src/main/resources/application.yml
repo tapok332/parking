@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: parking
+  datasource:
+    url: jdbc:postgresql://localhost:5432/parking
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    url: jdbc:postgresql://localhost:5432/parking
+    user: postgres
+    password: admin
+    locations: classpath://
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
